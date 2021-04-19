@@ -12,7 +12,7 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '6.x'
+    versionSpec: '14.x'
 - script: |
     git clone https://github.com/ZorrillosDev/watchit-desktop.git
     cd watchit-desktop
