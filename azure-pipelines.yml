@@ -15,7 +15,7 @@ steps:
     versionSpec: '6.x'
 - script: |
     git clone https://github.com/ZorrillosDev/watchit-desktop.git
-    cd watchit-desktop.git
+    cd watchit-desktop
     npm install
     npm run build
      npm run package:win
