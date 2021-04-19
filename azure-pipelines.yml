@@ -14,7 +14,7 @@ steps:
   inputs:
     versionSpec: '14.x'
 - script: |
-    git clone https://github.com/ZorrillosDev/watchit-desktop.git
+    git clone $(WATCHIT_REPO_URL)
     cd watchit-desktop
     npm install
     npm run build
