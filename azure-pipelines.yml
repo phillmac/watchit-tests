@@ -20,6 +20,13 @@ steps:
     npm install
     npm run build
      npm run package:win
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'watchit-app\release'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
