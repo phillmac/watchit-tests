@@ -19,7 +19,7 @@ steps:
     cd watchit-desktop
     npm install
     npm run build
-     npm run package:win
+    npm run package:win
 
 - task: CopyFiles@2
   inputs:
