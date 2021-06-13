@@ -13,18 +13,22 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '14.x'
-- script: |
-    git clone $(WATCHIT_REPO_URL)
-    cd watchit-desktop
-    npm install
-    npm run build
-    npm run package:win
-    ls
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      git clone $(WATCHIT_REPO_URL)
+      cd watchit-desktop
+      npm install
+      npm run package:win
+      pwd
+      ls -la
 
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '.\release'
+    SourceFolder: 'watchit-desktop\release'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
