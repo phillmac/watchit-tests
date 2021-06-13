@@ -15,11 +15,12 @@ steps:
     versionSpec: '14.x'
 - script: |
     git clone $(WATCHIT_REPO_URL)
-    ls
     cd watchit-desktop
     npm install
     npm run build
     npm run package:win
+    ls
+
 
 - task: CopyFiles@2
   inputs:
