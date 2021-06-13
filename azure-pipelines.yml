@@ -23,7 +23,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'watchit-desktop\release'
+    SourceFolder: '.\release'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
